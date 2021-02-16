@@ -26,11 +26,11 @@ class SignIn extends React.Component{
     render(){
         return(
             <div className='sign-in'>
-                <h2>I already have an accoun</h2>
+                <h2 className='title'>I already have an accoun</h2>
                 <span >Sign in with your email</span>
                 <form onSubmit={this.handleSubmit}>
                     <FormInput lable='email' handleChange={this.handleChange} type='email' name='email' value={this.state.email} required />                    
-                    <FormInput lable='password' handleChange={this.handleChange} name='password ' type='password' value={this.state.password} />
+                    <FormInput lable='password' handleChange={this.handleChange} name='password ' type='password' value={this.state.password} required />
                     <CustomButton type='submit'>Sign In</CustomButton>
                 </form>
             </div>
