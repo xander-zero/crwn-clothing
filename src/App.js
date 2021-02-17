@@ -5,6 +5,7 @@ import {Switch,Route} from 'react-router-dom'
 import ShopPage from './pages/shop/shop.componen';
 import Header from './components/header/header.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import {setCurrentUser} from './redux/user/user.action'
 class App extends React.Component  {
   render(){
     return (
@@ -19,5 +20,6 @@ class App extends React.Component  {
     );
   }
 }
+
 
 export default App;

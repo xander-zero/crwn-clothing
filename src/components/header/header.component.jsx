@@ -13,8 +13,10 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
-
-const Header = (props) => {
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import CartIcon from '../cart-icon/cart-icon.componnt';
+import {connect} from 'react-redux'
+const Header = ({hidden}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -55,8 +57,17 @@ const Header = (props) => {
           </Nav>
           {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
+        <CartIcon />
       </Navbar>
+      {
+        hidden ? null : <CartDropdown />
+      }
     </div>
   );
 }
-export default Header;
+
+const mapStateToProps=({cart:{hidden}})=>({
+  hidden
+})
+
+export default connect(mapStateToProps)(Header);
