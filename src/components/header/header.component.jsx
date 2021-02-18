@@ -16,6 +16,7 @@ import {
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import CartIcon from '../cart-icon/cart-icon.componnt';
 import {connect} from 'react-redux'
+import {selectCartHidden} from '../../redux/cart/cart-selector'
 const Header = ({hidden}) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -66,8 +67,8 @@ const Header = ({hidden}) => {
   );
 }
 
-const mapStateToProps=({cart:{hidden}})=>({
-  hidden
+const mapStateToProps=(state)=>({
+  hidden:selectCartHidden(state)
 })
 
 export default connect(mapStateToProps)(Header);
