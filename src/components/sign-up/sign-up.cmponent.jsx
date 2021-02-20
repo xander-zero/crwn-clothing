@@ -31,13 +31,13 @@ class SignUp extends React.Component{
         const {displayName,email,password,confirmPass} =this.state
         return(
             <div className='sign-up'>
-                <h2 className='title'>I do not have a account</h2>
-                <span>Sign up with your email and password</span>
+                <h2 className='title'>من اکانت ندارم</h2>
+                <span>ثبت نام</span>
                 <form className='sign-up-form' onSubmit={this.handleSubmit}>
                     <FormInput
                     name='displayName'
                     type='text'
-                    lable='displayName'
+                    lable='نام کاربری'
                     value={displayName}
                     handleChange={this.handleChange}
                     required
@@ -45,7 +45,7 @@ class SignUp extends React.Component{
                      <FormInput
                     name='email'
                     type='email'
-                    lable='email'
+                    lable='ایمیل'
                     value={email}
                     handleChange={this.handleChange}
                     required
@@ -53,7 +53,7 @@ class SignUp extends React.Component{
                      <FormInput
                     name='password'
                     type='password'
-                    lable='password'
+                    lable='رمز کاربری'
                     value={password}
                     handleChange={this.handleChange}
                     required
@@ -61,12 +61,12 @@ class SignUp extends React.Component{
                      <FormInput
                     name='confirmPass'
                     type='password'
-                    lable='confirmPass'
+                    lable='تایید رمز کاربری'
                     value={confirmPass}
                     handleChange={this.handleChange}
                     required
                     />
-                    <CustomButton type='submit'>Sign Up</CustomButton>
+                    <CustomButton type='submit'>ثبت نام</CustomButton>
                 </form>
             </div>
         )

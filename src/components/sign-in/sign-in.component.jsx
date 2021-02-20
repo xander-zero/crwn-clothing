@@ -30,19 +30,19 @@ class SignIn extends React.Component{
     render(){
         return(
             <div className='sign-in'>
-                <h2 className='title'>I already have an accoun</h2>
-                <span >Sign in with your email</span>
+                <h2 className='title'>من اکانت دارم</h2>
+                <span >وروود</span>
                 <form onSubmit={this.handleSubmit}>
-                    <FormInput lable='email' handleChange={this.handleChange} type='email' name='email' value={this.state.email} required />                    
+                    <FormInput lable='ایمیل' handleChange={this.handleChange} type='email' name='email' value={this.state.email} required />                    
                     <FormInput
                     name='password'
                     type='password'
-                    lable='password'
+                    lable='رمز کاربری'
                     value={this.state.password}
                     handleChange={this.handleChange}
                     required
                     />
-                    <CustomButton type='submit'>Sign In</CustomButton>
+                    <CustomButton type='submit'>ورود</CustomButton>
                 </form>
             </div>
         )
