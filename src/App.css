@@ -1,7 +1,12 @@
   body{
-      font-family: 'Open Sans Condensed';
+      font-family: Shabnam;
       padding: 0px 60px 20px;
   }
   *{
     box-sizing: border-box;
   }
+  @font-face {
+    font-family: Shabnam;
+    src: local('Shabnam'), url(./assets/font/Shabnam.ttf) ;
+  }
+  

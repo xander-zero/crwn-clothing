@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './header.styles.scss'
 import {
   Collapse,
   Navbar,
@@ -24,36 +25,42 @@ const Header = ({hidden}) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar className='header' color="light" light expand="md">
         <NavbarBrand href="/">reactstrap</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/">HOME</NavLink>
+              <NavLink href="/">صفحه اصلی</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/shop">SHOP</NavLink>
+              <NavLink href="/shop">فروشگاه</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                محصولات
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                  چادر
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                  روسری
+                </DropdownItem>
+                <DropdownItem>
+                  بچگانه
+                </DropdownItem>
+                <DropdownItem>
+                  زنانه
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>
+                {/* <DropdownItem>
                   Reset
-                </DropdownItem>
+                </DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="/signin">SIGN IN</NavLink>
+              <NavLink href="/signin">ثبت نام</NavLink>
             </NavItem>
           </Nav>
           {/* <NavbarText>Simple Text</NavbarText> */}
